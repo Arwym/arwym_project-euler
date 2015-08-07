@@ -1,11 +1,11 @@
 sum = 0
-fib_cache = {}
+fib_mem = {}
 def fib(n):
-	if n in fib_cache:
-		return fib_cache[n]
+	if n in fib_mem:
+		return fib_mem[n]
 	else:
-		fib_cache[n] = n if n < 2 else fib(n-2) + fib(n-1)
-		return fib_cache[n]
+		fib_mem[n] = n if n < 2 else fib(n-2) + fib(n-1)
+		return fib_mem[n]
 
 n = 0
 while fib(n) < 4000000:
